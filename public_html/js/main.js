@@ -24,6 +24,12 @@ function queryAccounts() {
     web3.eth.getAccounts(function (error, accounts) {
         if (!error) {
             accounts.forEach(addAccountToRadioSelector);
+        } else {
+            var button = document.querySelector('#send-transaction-form button');
+            button.disabled = true;
+            
+            var form = document.querySelector('#send-transaction-form');
+            form.textContent = "Please start an Ethereum Network on your local computer and open a RPC Port on port 8545. Then refresh.";
         }
     });
 }

@@ -75,6 +75,15 @@ button:hover {
     height: 3em;
 }
 
+button:disabled {
+    margin-top: 1em;
+    border: 1px solid #333;
+    background-color: #555;
+    color: #333;
+    width: 30em;
+    height: 3em;
+}
+
 div.transaction.waiting-transaction {
     border-color: #666;
     background-color: #999;
