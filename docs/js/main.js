@@ -43,7 +43,6 @@ function addAccountToRadioSelector(account) {
 
     input.id = 'account-' + account;
     queryRadio.appendChild(input);
-    queryRadio.appendChild(label);
 }
 
 function addFormListener() {
