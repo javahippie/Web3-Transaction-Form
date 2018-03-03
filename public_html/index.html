@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Web3 Test Application</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <form id="send-transaction-form">
+            <h1>Send Transaction</h1>
+            <select id="account-selector" name="account">
+            </select>
+            <input id="transaction-recipient" 
+                   name="recipient" 
+                   type="text" 
+                   placeholder="Recipient Address" />
+            <input id="transaction-value" 
+                   name="transactionValue" 
+                   type="text" 
+                   placeholder="Amount" />
+            <button type="submit">Send Transaction</button>
+        </form>
+
+        <div id="transaction-log"></div>
+
+        <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

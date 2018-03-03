@@ -1,0 +1,145 @@
+body {
+    background-color: #333;
+    color: #009999;
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+}
+
+h1 {
+    margin: 0px;
+    text-align: center;
+}
+
+form, div.transaction {
+    width: 750px;
+    font-size: 16px;
+    background: #555;
+    border: 5px solid #009999;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
+
+    vertical-align: middle;
+
+    -webkit-animation: slideDown 0.5s ease-out;
+    -webkit-animation-iteration-count: 1;
+}
+
+div.transaction svg {
+    margin-left: 10px;
+    font-size: 2em;
+}
+
+input, select { 
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;     
+
+    display: block;
+    float: none;
+    background-color: #555;
+    border: none;
+    color: #009999;
+    border-bottom: 1px dashed #009999;
+    height: 3em;
+    width: 320px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin-top: 1em;
+    border: 1px solid #009999;
+    background-color: #555;
+    color: #009999;
+    width: 320px;
+    height: 3em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    margin-top: 1em;
+    border: 1px solid #009999;
+    background-color: #009999;
+    color: #555;
+    width: 30em;
+    height: 3em;
+}
+
+div.transaction.waiting-transaction {
+    border-color: #666;
+    background-color: #999;
+    color: #666;
+}
+
+div.transaction.pending-transaction {
+    -webkit-animation: pulsate 2s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.1;
+}
+
+div.transaction.complete-transaction {
+    border-color: #009999;
+    -webkit-animation: shake 1s ease-out;
+    -webkit-animation-iteration-count: 1; 
+}
+
+@keyframes pulsate {
+    0% { 
+        opacity: 0.1;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: 0.1;
+    }
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    50%{
+        transform: translateY(8%);
+    }
+    65%{
+        transform: translateY(-4%);
+    }
+    80%{
+        transform: translateY(4%);
+    }
+    95%{
+        transform: translateY(-2%);
+    }			
+    100% {
+        transform: translateY(0%);
+    }		
+}
