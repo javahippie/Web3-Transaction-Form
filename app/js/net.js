@@ -12,8 +12,12 @@ Net.pendingFilter = Net.web3.eth.filter('pending');
 Net.latestFilter = Net.web3.eth.filter('latest');
 
 Net.sendTransaction = function(request, callback) {
-    Net.web3.eth.sendTransaction(request, sendTransactionCallback);
-}
+    Net.web3.eth.sendTransaction(request, function(error, response) {
+        Net.web3.eth.getTransaction(response, function(error, tx) {
+            callback(error, tx);
+        });
+    });
+};
 
 Net.subscribeToPending = function (callback) {
     Net.pendingFilter.watch(function (error, val) {
