@@ -36,6 +36,16 @@ UI.createLogPanel = function(response) {
     log.appendChild(entry);
 };
 
+UI.createErrorPanel = function(response) {
+    var log = document.querySelector('#transaction-log');
+    var entry = document.createElement('div');
+    entry.id = 'transaction-' + response;
+    entry.textContent = response;
+    entry.className = 'error-transaction transaction';
+    entry.appendChild(UI.createFontAwesomeIcon('fa-exclamation-circle'));
+    log.appendChild(entry);
+};
+
 UI.setLogPanelPending = function(transaction) {
     var logEntry = document.querySelector('#transaction-' + transaction);
     logEntry.className = 'pending-transaction transaction';

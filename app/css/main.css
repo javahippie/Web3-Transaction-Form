@@ -102,6 +102,13 @@ div.transaction.complete-transaction {
     -webkit-animation-iteration-count: 1; 
 }
 
+div.transaction.error-transaction {
+    color: red;
+    border-color: red;
+    -webkit-animation: shake 1s ease-out;
+    -webkit-animation-iteration-count: 1; 
+}
+
 @keyframes pulsate {
     0% { 
         opacity: 0.1;
